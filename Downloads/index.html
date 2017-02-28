@@ -1,0 +1,121 @@
+<!DOCTYPE html> <!-- v1.0.0.0 -->
+<html lang="es">
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<!-- Icons -->
+	<link rel="apple-touch-icon" sizes="180x180" href="../apple-touch-icon.png">
+	<link rel="icon" type="image/png" href="../favicon-32x32.png" sizes="32x32">
+	<link rel="icon" type="image/png" href="../favicon-16x16.png" sizes="16x16">
+	<link rel="manifest" href="../manifest.json">
+	<link rel="mask-icon" href="../safari-pinned-tab.svg" color="#00a300">
+	<meta name="msapplication-TileColor" content="#00a300">
+	<meta name="msapplication-TileImage" content="../mstile-144x144.png">
+	<meta name="theme-color" content="#00a300">
+
+	<title>AndRBR</title>
+
+	<link rel="stylesheet" type="text/css" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+	<link rel="stylesheet" type="text/css" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+	<link rel="stylesheet" type="text/css" href="../rc/css/stylesheet.css">
+</head>
+<body>
+	<div class="container-fluid">
+		<header>
+			<img src="../rc/img/logoAND_white.svg" width="30%" height="auto">
+			<p>
+				<h3>
+					<span>AndRBR</span>
+					<span id="header-social">
+						<a href="https://github.com/andrbr"><i class="fa fa-github" aria-hidden="true"></i></a>
+						<a href="https://twitter.com/andresbarrio"><i class="fa fa-twitter" aria-hidden="true"></i></a>
+					</span>
+				</h3>
+			</p>
+		</header>
+	</div>
+	<nav class="navbar navbar-inverse">
+		<div class="container-fluid">
+			<div class="navbar-header">
+				<button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+					<span class="icon-bar"></span>
+					<span class="icon-bar"></span>
+					<span class="icon-bar"></span> 
+				</button>
+				<a class="navbar-brand" href="#"><span class="glyphicon glyphicon-home"></span></a>
+			</div>
+			<div class="collapse navbar-collapse" id="myNavbar">
+				<ul class="nav navbar-nav">
+					<li><a href="../">Inicio</a></li>
+					<li class="active"><a href="#">Descargas</a></li>
+				</ul>
+				<ul class="nav navbar-nav navbar-right">
+					<li class="dropdown">
+						<a class="dropdown-toggle" data-toggle="dropdown" href="#">
+							<span class="glyphicon glyphicon-globe"></span>
+							<span class="caret"></span>
+							<ul id="lang-sel" class="dropdown-menu">
+								<li><a href="#">Español <span class="lang-code">es</span></a></li>
+								<li><a href="#" class="disabled">English <span class="lang-code">en</span></a></li>
+							</ul>
+						</a>
+					</li>
+				</ul>
+			</div>
+		</div>
+	</nav>
+
+	<div class="container-fluid">
+		<h3 id="dwnTitle">Descargas</h3>
+		<p>Esta sección de descargas ofrece la lista de descargas para las versiones compiladas de mis programas.</p>
+
+		<div id="dwnList"></div>
+
+		<p id="dwnNote">Nota: Actualmente solo puedo compilar los programas en windows, si deseas enviarme una versión compilada, puedes solicitar un "merge" en el <a href="https://github.com/ANDRBR/andrbr.github.io">GitHub del sitio</a> con tu version compilada.</p>
+	</div>
+		
+	<footer class="logoInBackground">
+		<h1>
+			<span><a href="https://github.com/ANDRBR"><i class="fa fa-github"></i></a></span>
+			<span><a href="www.linkedin.com/in/andres-barrio"><i class="fa fa-linkedin"></i></a></span>
+			<span><a href="https://twitter.com/andresbarrio"><i class="fa fa-twitter"></i></a></span>
+		</h1>
+		<p>
+			Creado por: <a href="https://github.com/ANDRBR">AndRBR</a>
+			· <a href="https://github.com/ANDRBR/andrbr.github.io">GitHub del sitio</a>
+			· <a href="https://github.com/ANDRBR/andrbr.github.io/issues">Problemas o Sugerencias</a>
+		</p>
+		<p>andrbr59@gmail.com</p>
+	</footer>
+
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+	<script type="text/javascript" src="../rc/js/downloads_info.js"></script>
+
+	<!-- displaying the download list -->
+	<script type="text/javascript">
+		function buildDownloadList(){
+			$("#dwnList").html("");
+
+			for (var i = 0; i < downloads.length; i++) {
+				var aux = "<div class='panel panel-primary' id='" + downloads[i].name + "'><div class='panel-heading'>" + downloads[i].name + "</div>" + "<div class='panel-body'><p>" + downloads[i].description + "</p>";
+				
+				for (var j = 0; j < downloads[i].types.length; j++) {
+					aux += "<div class='panel panel-info'><div class='panel-heading'>" + downloads[i].types[j].type + ":</div>" + "<div class='panel-body'>";
+
+					for (var k = 0; k < downloads[i].types[j].links.length; k++) {
+						aux += "<a href='" + downloads[i].types[j].links[k] + "' class='btn btn-success'>" + downloads[i].types[j].links[k] + "</a>";
+					}
+
+					aux += "</div></div></div>";
+				}
+
+				$("#dwnList").append(aux);
+			}
+		}
+
+		$(document).ready( function() {buildDownloadList()} );
+	</script>
+
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+</body>
+</html>

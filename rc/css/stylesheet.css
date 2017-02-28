@@ -4,6 +4,12 @@ a.disabled {
 	pointer-events: none;
 }
 
+p {
+	text-align  : justify;
+	text-justify: inter-word;
+	text-indent : 2ex;
+}
+
 header {
 	text-align: center;
 	margin: auto;
@@ -26,9 +32,13 @@ footer {
 	background-color: #222;
 	bottom: 0px;
 	width: 100%;
-	text-align: center;
 	margin-top: 1em;
 	padding: 1em;
+}
+
+footer * {
+	text-align: center;
+	text-indent: 0;
 }
 
 #header-social { float: right; }
@@ -37,6 +47,38 @@ footer {
 #lang-sel > li > a > .lang-code {
 	color: lightgrey;
 	float: right;
+}
+
+#dwnTitle {
+	font-weight: bold;
+}
+
+#dwnList > div.panel { padding: 0; }
+
+#dwnList .panel-primary > .panel-heading {
+	font-size: large;
+	background-color: #007a7a;
+	border-color: #007070;
+}
+
+#dwnList .panel-primary { border-color: #007070; }
+
+#dwnNote {
+	color: grey;
+	padding-left: 1ex;
+	padding-right: 1ex;
+}
+
+#my-Projects p {
+	text-align: center;
+	margin: 0 auto 1.5ex;
+}
+
+.logoInBackground {
+	background-image: url("../img/logoAND.svg");
+	background-size: auto 60%;
+	background-repeat: no-repeat;
+    background-position: center;
 }
 
 .carousel-title {
@@ -53,7 +95,7 @@ footer {
 
 .carousel-indicators { margin-bottom: 10px; }
 
-.carousel-caption > h3 { margin-top: 0; }
+.carousel-caption > h3 { margin: 0 auto; }
 
 .project-img img {
 	text-align: center;
