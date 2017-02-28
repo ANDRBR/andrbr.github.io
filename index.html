@@ -1,4 +1,4 @@
-<!DOCTYPE html> <!-- v1.1.0.0 -->
+<!DOCTYPE html> <!-- v1.3.0.0 -->
 <html lang="es">
 <head>
 	<meta charset="utf-8">
@@ -13,37 +13,22 @@
 	<meta name="msapplication-TileImage" content="mstile-144x144.png">
 	<meta name="theme-color" content="#00a300">
 
-	<title>AndRBR</title>
+	<title>Andrbr</title>
 
 	<link rel="stylesheet" type="text/css" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
 	<link rel="stylesheet" type="text/css" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
 	<link rel="stylesheet" type="text/css" href="rc/css/stylesheet.css">
 </head>
 <body>
-	<div class="container-fluid">
-		<header>
-			<img src="rc/img/logoAND_white.svg" width="30%" height="auto">
-			<p>
-				<h3>
-					<span>AndRBR</span>
-					<span id="header-social">
-						<a href="https://github.com/andrbr"><i class="fa fa-github" aria-hidden="true"></i></a>
-
-						<a href="https://twitter.com/andresbarrio"><i class="fa fa-twitter" aria-hidden="true"></i></a>
-					</span>
-				</h3>
-			</p>
-		</header>
-	</div>
-	<nav class="navbar navbar-inverse">
-		<div class="container-fluid">
+	<header>
+		<nav class="navbar navbar-inverse">
 			<div class="navbar-header">
 				<button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
 					<span class="icon-bar"></span>
 					<span class="icon-bar"></span>
 					<span class="icon-bar"></span> 
 				</button>
-				<a class="navbar-brand" href="#"><span class="glyphicon glyphicon-home"></span></a>
+				<a class="navbar-brand" href="#"><img src="rc/img/logoAND_white.svg" width="auto" height="100%"></a>
 			</div>
 			<div class="collapse navbar-collapse" id="myNavbar">
 				<ul class="nav navbar-nav">
@@ -63,26 +48,49 @@
 					</li>
 				</ul>
 			</div>
-		</div>
-	</nav>
+		</nav>
+		<img id="banner" src="rc/img/banner.png" width="100%" height="auto">
+	</header>
 	
-	<div id="my-Projects" class="carousel slide container" data-ride="carousel">
-		<h4 class="carousel-title">En Github:</h4>
-		<!-- Indicators -->
-		<ol class="carousel-indicators"></ol>
+	<div id="abs">
+		<img src="rc/img/logoAND_banner.svg" width="auto" height="10%">
+		<div id="nameSlider" class="carousel slide" data-ride="carousel">
+			<div class="carousel-inner" role="listbox">
+				<div class="item active">
+					<h2>Andrés Barrio</h2>
+				</div>
+				<div class="item">
+					<h2>
+						<span><a href="https://github.com/ANDRBR"><i class="fa fa-github"></i></a></span>
+						<span><a href="www.linkedin.com/in/andres-barrio"><i class="fa fa-linkedin"></i></a></span>
+						<span><a href="https://twitter.com/andresbarrio"><i class="fa fa-twitter"></i></a></span>
+					</h2>
+				</div>
+				<div class="item">
+					<h2>Andrbr</h2>
+				</div>
+			</div>
+		</div>
+	</div>
+	<div class="container">
+		<div id="my-Projects" class="carousel slide" data-ride="carousel">
+			<h4 class="carousel-title">En Github:</h4>
+			<!-- Indicators -->
+			<ol class="carousel-indicators"></ol>
 
-		<!-- Wrapper for slides -->
-		<div class="carousel-inner" role="listbox"></div>
+			<!-- Wrapper for slides -->
+			<div class="carousel-inner" role="listbox"></div>
 
-		<!-- Left and right controls -->
-		<a class="left carousel-control" href="#my-Projects" role="button" data-slide="prev">
-			<span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
-			<span class="sr-only">Previous</span>
-		</a>
-		<a class="right carousel-control" href="#my-Projects" role="button" data-slide="next">
-			<span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
-			<span class="sr-only">Next</span>
-		</a>
+			<!-- Left and right controls -->
+			<a class="left carousel-control" href="#my-Projects" role="button" data-slide="prev">
+				<span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
+				<span class="sr-only">Previous</span>
+			</a>
+			<a class="right carousel-control" href="#my-Projects" role="button" data-slide="next">
+				<span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
+				<span class="sr-only">Next</span>
+			</a>
+		</div>
 	</div>
 
 	<footer class="logoInBackground">

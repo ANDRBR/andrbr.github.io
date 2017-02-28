@@ -11,15 +11,10 @@ p {
 }
 
 header {
-	text-align: center;
-	margin: auto;
-	padding: 10px;
-	color: white;
-	background: rgb(98,125,77);
-	background: -moz-radial-gradient(center, ellipse cover,  rgba(98,125,77,1) 0%, rgba(31,59,8,1) 100%);
-	background: -webkit-radial-gradient(center, ellipse cover,  rgba(98,125,77,1) 0%,rgba(31,59,8,1) 100%);
-	background: radial-gradient(ellipse at center,  rgba(98,125,77,1) 0%,rgba(31,59,8,1) 100%);
-	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#627d4d', endColorstr='#1f3b08',GradientType=1 );
+	width: 100%;
+	display: flex;
+    justify-content: center;
+	overflow: hidden;
 }
 
 header h3 {
@@ -41,17 +36,51 @@ footer * {
 	text-indent: 0;
 }
 
-#header-social { float: right; }
-#header-social > a { color: white; }
+#abs {
+	position: absolute;
+	margin-top: -21.428571428571428571428571428572%;
+	left: 50%;
+	-webkit-transform: translate(-50%, -50%);
+	-moz-transform: translate(-50%, -50%);
+	transform: translate(-50%, -50%);
+}
+
+#abs > img { height: 21.428571428571428571428571428572vh; }
+
+#abs > * {
+	white-space: nowrap;
+	margin: 0 auto;
+	color: #D3E3E1;
+	font-family:  Arial, Helvetica, sans-serif;
+	font-weight: bold;
+	text-shadow: 2px 2px 3px black;
+	text-align: center;
+}
+
+#abs a { color: #D3E3E1; }
+
+#abs a:hover { color: #A3F3F1; }
+
+#abs.jumbotron { background-color: transparent; }
+
+#abs .animate {
+	-moz-animation-duration: 4s;
+	-webkit-animation-duration: 4s;
+	animation-duration: 4s;
+}
+
+#banner {
+	flex: none;
+	width: 100%;
+	height: 42.857142857142857142857142857143%;
+}
 
 #lang-sel > li > a > .lang-code {
 	color: lightgrey;
 	float: right;
 }
 
-#dwnTitle {
-	font-weight: bold;
-}
+#dwnTitle { font-weight: bold; }
 
 #dwnList > div.panel { padding: 0; }
 
@@ -69,9 +98,90 @@ footer * {
 	padding-right: 1ex;
 }
 
+#my-Projects {
+	margin: 0;
+	width: 100%;
+}
+
 #my-Projects p {
 	text-align: center;
 	margin: 0 auto 1.5ex;
+}
+
+
+
+@keyframes fade {
+	from { opacity: 1; }
+	to { opacity: 0; }
+}
+
+@-moz-keyframes fade {
+	from { opacity: 1; }
+	to { opacity: 0; }
+}
+
+@-webkit-keyframes fade {
+	from { opacity: 1; }
+	to { opacity: 0; }
+}
+
+.animate.fade.out {
+	-moz-animation-name: fade;
+	-webkit-animation-name: fade;
+	animation-name: fade;
+}
+
+.animate.fade.in {
+	-moz-animation-name: fade;
+	-moz-animation-direction: reverse;
+
+	-webkit-animation-name: fade;
+	-webkit-animation-direction: reverse;
+
+	animation-name: fade;
+	animation-direction: reverse;
+}
+
+.animate.fade.in-out {
+	-moz-animation-name: fade;
+	-moz-animation-timing-function: ease-in-out;
+	-moz-animation-direction: alternate-reverse;
+
+	-webkit-animation-name: fade;
+	-webkit-animation-timing-function: ease-in-out;
+	-webkit-animation-direction: alternate-reverse;
+
+	animation-name: fade;
+	animation-timing-function: ease-in-out;
+	animation-direction: alternate-reverse;
+}
+
+.animate.fade.out-in {
+	-moz-animation-name: fade;
+	-moz-animation-timing-function: ease-in-out;
+	-moz-animation-direction: alternate;
+
+	-webkit-animation-name: fade;
+	-webkit-animation-timing-function: ease-in-out;
+	-webkit-animation-direction: alternate;
+
+	animation-name: fade;
+	animation-timing-function: ease-in-out;
+	animation-direction: alternate;
+}
+
+.animate.infinite {
+	-moz-animation-iteration-count: infinite;
+	-webkit-animation-iteration-count: infinite;
+	animation-iteration-count: infinite;
+}
+
+.hCenter {
+	position: relative;
+	left: 50%;
+	-webkit-transform: translateX(-50%);
+	-moz-transform: translateX(-50%);
+	transform: translateX(-50%);
 }
 
 .logoInBackground {
@@ -80,6 +190,10 @@ footer * {
 	background-repeat: no-repeat;
     background-position: center;
 }
+
+.carousel { padding: 0 }
+
+.carousel-control { background-image: none !important; }
 
 .carousel-title {
 	color: dimgrey;
@@ -102,8 +216,23 @@ footer * {
 	margin: 0 auto;
 }
 
+.navbar {
+	position: absolute;
+	width: 100%;
+	background-color: rgba(34, 34, 34, .5);
+	border: none;
+	border-radius: 0;
+}
+
 @media screen and (max-width: 768px) {
 	header h3 { text-align: center; }
+
+	#abs { margin-top: -25vh; }
+
+	#banner {
+		height: 50vh;
+		width: auto;
+	}
 
 	#header-social { float: none; }
 	#lang-sel > li > a.disabled, #lang-sel > li > a > .lang-code { color: dimgrey !important; }
