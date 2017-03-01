@@ -71,6 +71,7 @@ footer * {
 
 #banner {
 	flex: none;
+	max-width: 2100px;
 	width: 100%;
 	height: 42.857142857142857142857142857143%;
 }
