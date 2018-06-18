@@ -6,7 +6,7 @@ var downloads = [
 			{
 				type: "Windows",
 				links: [
-					"AppInstaller.zip"
+					"https://github.com/ANDRBR/QtAppInstaller/releases/latest"
 				]
 			}
 		]
